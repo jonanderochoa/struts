@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+    	<form-bean name="holaMundoForm" type="HolaMundoStruts.action.HolaMundoForm"/>
+    </form-beans>
+
+	<global-forwards>
+        <forward name="holaMundo" path="/holaMundo.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/holaMundo" 
+	        type="HolaMundoStruts.action.HolaMundoAction" 
+	        name="holaMundoForm">
+	       	<forward name="success" path="/holaMundo.jsp" />
+        </action>
+    </action-mappings>
+
+</struts-config>
